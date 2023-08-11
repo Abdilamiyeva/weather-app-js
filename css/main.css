@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /* background-image: url(../assets/weather_bg_img.svg); */
+    background-image: url("https://www.wallpaperup.com/uploads/wallpapers/2015/09/10/801184/12341b63eeaaebb651488398158cf1bf.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.wrapper {
+    width: 600px;
+    background: #ffffff8f;
+    border-radius: 7px;
+    padding:50px;
+    min-width: 400px;
+    min-height: 160px;
+    border:2px solid #ddd;
+    border-spacing: inherit;
+    border-width: medium;
+    border-radius: 10px;
+    border-style:double;
+    background: #FFFF;
+    box-shadow:0 0 7px  #f0f0f0;
+}
+
+.wrapper header {
+    background: -webkit-linear-gradient(rgb(63, 118, 173), #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #0a3865;
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 30px;
+    display: flex;
+    margin-left: 12px;
+    align-items: center; 
+    /* border-bottom: 1px solid #85a8c1;  */
+}
+
+header i{ 
+cursor: pointer;
+font-size: 0em;
+margin-right: 8px;
+}
+
+.wrapper.active header i{
+    font-size: 30px;
+    margin-left: 5px;
+}
+
+.wrapper .input-part {
+    margin: 20px 25px 30px;
+}
+
+.wrapper.active .input-part{ 
+display: none;
+}
+
+.input-part .info-txt { 
+    display: none;
+    font-size: 17px;
+    text-align: center;
+    padding: 12px 10px;
+    border-radius: 7px;
+    margin-bottom: 15px;
+}
+
+.info-txt.error{ 
+    display: block;
+    color: #721c24;
+    background: #f8d7da ;
+    border: 1px solid #f5c6cb;
+}
+
+.info-txt.pending{
+    display: block;
+    color: #0c5460;
+    background: #d1ecf1;
+    border: 1px solid #bee5eb;
+}
+
+.input-part :where(input,button) { 
+    width: 100%;
+    height: 55px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    border-radius: 7px;
+}
+
+.input-part input {
+    width: 75% !important;
+    padding-left: 20px;
+    margin-right: 20px;
+    border: 1px solid #0c5c6a1f;
+}
+
+
+.input-part input:is(:focus, :valid ){ 
+    border: 1px solid #0c5c6a1f;
+}
+
+.input-part input::placeholder{
+    color:#918f8f;
+}
+
+.searchArea{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+.searchIcon{
+    border-radius: 10px; 
+    background-color:#0e3052;
+    color: white;
+    width: 25%;
+    height: 55px;
+    outline: none;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    padding-top: 21px;
+    margin-left: 8px;
+    transition: 0.3s ease;
+}
+
+.searchIcon:hover {
+    background: #0a3865;
+}
+
+.input-part .separator {
+    height: 1px;
+    width: 100%;
+    margin: 45px 0;
+    background-color: #85a8c1; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.separator::before{
+    content: "or";
+    color: #85a8c1;
+    padding: 0 15px;
+    font-size: 19px;
+    background-color: #fff;
+}
+.input-part button {
+    color: #fff;
+    cursor: pointer;
+    background-color:#7097b2;
+    transition: 0.3s ease;
+}
+.input-part button:hover{
+    background: #04304e5e;
+}
+.wrapper .weather-part{
+    display:none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.wrapper.active .weather-part{
+    display: flex;
+}
+.weather-part img {
+    width: 170px;
+} 
+.weather-part .temp {
+    display: flex;
+    font-size: 70px;
+}
+.weather-part .temp .numb { 
+font-weight: 100;
+}
+.weather-part .temp .deg {
+    font-size: 40px;
+    margin: 10px 5px 0 0 ;
+    display: block;
+}
+.weather-part .weather{
+    font-size: 17px;
+    text-align: center;
+    margin: -5px 20px 15px;
+}
+.weather-part .location{
+    display: flex;    
+    font-size: 19px;
+    margin-bottom: 30px;
+    text-align: center;
+    align-items: flex-start;
+    padding: 0 20px;
+
+}
+.location i{
+font-size: 21px;
+margin: 0 5px 0 0 ;
+}
+.weather-part .bottom-details{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* border-top: 1px solid #bfbfbf; */
+    border-top: 1px solid #85a8c1; 
+}
+.bottom-details .column {
+    width: 100%;
+    display: flex;
+    padding: 15px 0;
+    align-items: center;
+    justify-content: center;
+}
+.column i{
+    color: #8d8b8b; 
+    font-size: 40px;
+}
+.column.humidity {
+    border-left:1px solid #bfbfbf;
+}
+.column .details{
+    margin-left: 3px;
+}
+.details .temp, .humidity span {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: -3px;
+}
+.details .temp .deg{
+    margin:0;
+    font-size: 17px;
+    padding: 0 2px 0 1px;
+}
+.column .details p{
+    font-size: 14px;
+    margin-top: -6px;
+}
+.humidity i{
+    font-size: 37px;
+}
+
+
+@media screen and (max-width: 770px){
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper{
+    max-width: 400px;
+    max-height: 500px;
+    font-size: 20px;
+    margin: 0 20px 0 20px;
+}
+
+.wrapper header {
+    font-weight: 400;
+}
+img {
+    max-width: 170px;
+}
+}
+
+
+
+
