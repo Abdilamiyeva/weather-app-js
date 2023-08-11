@@ -17,7 +17,7 @@ inputField.onkeydown = function(e){
 
 searchIcon.addEventListener("click", e => {
     if (inputField.value === "" || inputField.value === " "){
-        alert("Please enter data in this field")
+        alert("Iltimos ma'lumot kiriting !")
     } else {
         requestApi(inputField.value);
     }
@@ -69,17 +69,17 @@ function weatherDetails(info){
     const {feels_like, humidity, temp} = info.main;
 
         if(id == 800){
-            wIcon.src="assets/clear.svg"
+            wIcon.src="images/clear.svg"
         } else if (id >= 200 && id <=232){
-            wIcon.src="assets/strom.svg"
+            wIcon.src="images/strom.svg"
         } else if (id >= 600 && id <= 622){
-            wIcon.src="assets/snowy.svg"
+            wIcon.src="images/snowy.svg"
         } else if (id >= 701 && id <=781){
-            wIcon.src="assets/haze.svg"
+            wIcon.src="images/haze.svg"
         } else if (id >= 801 && id <=804){
-            wIcon.src="assets/cloudy.svg"
+            wIcon.src="images/cloudy.svg"
         }  else if ((id >= 300 && id <= 321) || (id >= 500 && id <= 531)){
-            wIcon.src="assets/rainy.svg"
+            wIcon.src="images/rainy.svg"
         } 
 
    //DOMga chizish uchun 

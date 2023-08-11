@@ -10,12 +10,10 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    /* background-image: url(../assets/weather_bg_img.svg); */
     background-image: url("https://www.wallpaperup.com/uploads/wallpapers/2015/09/10/801184/12341b63eeaaebb651488398158cf1bf.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    /* background-size: cover; */
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -48,7 +46,6 @@ body{
     display: flex;
     margin-left: 12px;
     align-items: center; 
-    /* border-bottom: 1px solid #85a8c1;  */
 }
 
 header i{ 
